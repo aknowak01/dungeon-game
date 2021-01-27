@@ -1,0 +1,25 @@
+# depslib dependency file v1.0
+1611697536 source:c:\users\fason\onedrive\pulpit\laby\projektzal\main.c
+	<stdio.h>
+	<stdlib.h>
+	"randomevents.h"
+
+1611696025 c:\users\fason\onedrive\pulpit\laby\projektzal\randomevents.h
+
+1611703435 source:c:\users\fason\onedrive\pulpit\laby\projektzal\randomevents.c
+	"randomevents.h"
+	<stdio.h>
+	<stdlib.h>
+
+1611697536 source:c:\users\fason\onedrive\pulpit\projektzal\main.c
+	<stdio.h>
+	<stdlib.h>
+	"randomevents.h"
+
+1611733037 c:\users\fason\onedrive\pulpit\projektzal\randomevents.h
+
+1611743481 source:c:\users\fason\onedrive\pulpit\projektzal\randomevents.c
+	"randomevents.h"
+	<stdio.h>
+	<stdlib.h>
+
