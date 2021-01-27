@@ -91,7 +91,8 @@ void enemytype1health(){
 }
 int fight1(int dificulty)
 {
-    int enemy=0,option,goaway,move;
+    int enemy=0,option,goaway,attackchance;
+    float move;
     srand(time(0));
     enemytype1damage(dificulty);
     enemytype1health();
@@ -115,16 +116,18 @@ int fight1(int dificulty)
                 }
                 else if(option==3){
                    goaway=rand()%10;
-                   if(goaway==1||goaway==9)
-                   {
+                   if(goaway==1||goaway==9){
                        return 2;
                    }
                    else player.health=player.health-skeleton.damage;
                 }
                 else if(option==4){
                     move=rand()%100-player.dodgeChance;
+                    if(move>40){
+                        skeleton.health=skeleton.health-player.damage;
+                    }
+                    else {skeleton.health=skeleton.health-player.damage;player.health=player.health-skeleton.damage;}
                 }
-
             }
             else return 1;
         }
@@ -134,7 +137,7 @@ int fight1(int dificulty)
         printf(" Walczysz z Zombie.\n");
         while(1)
         {
-            printf(" Zdrowie Zombie : %f\n Twoje zdrowie : %f\n\n 1.Atak.\n 2.Atak magiczny.\n 3.Próba ucieczki. 4.Unik i atak.\n\n Wybierz opcje :  ",zombie.health,player.health);
+            printf(" Zdrowie Zombie : %f\n Twoje zdrowie : %f\n\n 1.Atak.\n 2.Atak magiczny.\n 3.Próba ucieczki.\n 4.Unik i atak.\n\n Wybierz opcje :  ",zombie.health,player.health);
             scanf("%d",&option);
             if(zombie.health-player.damage>0){
                 if(player.health-zombie.damage<100){return 3;}
@@ -148,21 +151,23 @@ int fight1(int dificulty)
                 }
                 else if(option==3){
                    goaway=rand()%10;
-                   if(goaway==1||goaway==9)
-                   {
+                   if(goaway==1||goaway==9){
                        return 2;
                    }
                    else player.health=player.health-zombie.damage;
                 }
                 else if(option==4){
                     move=rand()%100-player.dodgeChance;
-                }
 
+                    if(move>40){
+                        zombie.health=zombie.health-player.damage;
+                    }
+                    else {zombie.health=zombie.health-player.damage;player.health=player.health-zombie.damage;}
+                }
             }
             else return 1;
         }
     }
-
 }
 void viewstats(char name){
     printf(" Twoje Statystyki\n\n");
@@ -218,5 +223,6 @@ void game(){
     battle=fight1(temp);
     if(battle==1){printf("\nWygrana!\n");}
     else if(battle=3){printf("\nPorazka\n");}
+    else if(battle=2){printf("\nUdalo ci sie uciec\n");}
     system ("PAUSE");
 }
