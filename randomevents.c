@@ -1,6 +1,7 @@
 #include "randomevents.h"
 #include <stdio.h>
 #include <stdlib.h>
+#define N 10
 struct atrilist{
     short int strength;
     short int wisdom;
@@ -66,7 +67,7 @@ void stats(int dificulty){
     player.health=1000*(2*0.5*atri.health);
     player.manapoints=2000+(200*0.25*atri.mana);}
     else if(dificulty==3){
-    player.damage=100*0.75*(1+(0.75*atri.strength));
+    player.damage=100*1*(1+(0.75*atri.strength));
     player.criticalDamage=200+player.damage;
     player.magicDamage=100*(1+(0.80*atri.wisdom));
     player.criticalChance=10+(2*atri.agility);
@@ -94,14 +95,17 @@ int fight1(int dificulty)
     srand(time(0));
     enemytype1damage(dificulty);
     enemytype1health();
+    enemy=rand()%2;
     if(enemy==0)
     {
+        printf(" Walczysz z Szkieletem.\n");
         while(1)
         {
-            printf(" Walczysz z Szkieletem.\n Zdrowie Szkieleta : %f\n Twoje zdrowie : %f\n\n 1.Atak.\n 2.Atak magiczny.\n 3.Próba ucieczki. 4.Unik i atak.\n\n Wybierz opcje :  ",skeleton.health,player.health);
+            printf(" Zdrowie Szkieleta : %f\n Twoje zdrowie : %f\n\n 1.Atak.\n 2.Atak magiczny.\n 3.Próba ucieczki. 4.Unik i atak.\n\n Wybierz opcje :  ",skeleton.health,player.health);
             scanf("%d",&option);
             if(skeleton.health-player.damage>0){
-                if(option==1){
+                if(player.health-skeleton.damage<100){return 3;}
+                else if(option==1){
                 skeleton.health=skeleton.health-player.damage;
                 player.health=player.health-skeleton.damage;
                 }
@@ -122,12 +126,41 @@ int fight1(int dificulty)
                 }
 
             }
-
             else return 1;
-
-
         }
+    }
+    else if(enemy==1)
+    {
+        printf(" Walczysz z Zombie.\n");
+        while(1)
+        {
+            printf(" Zdrowie Zombie : %f\n Twoje zdrowie : %f\n\n 1.Atak.\n 2.Atak magiczny.\n 3.Próba ucieczki. 4.Unik i atak.\n\n Wybierz opcje :  ",zombie.health,player.health);
+            scanf("%d",&option);
+            if(zombie.health-player.damage>0){
+                if(player.health-zombie.damage<100){return 3;}
+                else if(option==1){
+                zombie.health=zombie.health-player.damage;
+                player.health=player.health-zombie.damage;
+                }
+                else if(option==2){
+                zombie.health=skeleton.health-player.magicDamage;
+                player.health=player.health-zombie.damage;
+                }
+                else if(option==3){
+                   goaway=rand()%10;
+                   if(goaway==1||goaway==9)
+                   {
+                       return 2;
+                   }
+                   else player.health=player.health-zombie.damage;
+                }
+                else if(option==4){
+                    move=rand()%100-player.dodgeChance;
+                }
 
+            }
+            else return 1;
+        }
     }
 
 }
@@ -144,8 +177,8 @@ void viewatri(){
     printf("\n\n Tak zostaly rozdane punkty punkty.\n\n 1.Sila : %d\n 2.Wiedza : %d\n 3.Zrecznosc : %d\n 4.Zdrowie : %d\n 5.Mana : %d\n\n",atri.strength,atri.wisdom,atri.agility,atri.health,atri.mana);
 }
 void game(){
-    int option1,points,dificulty,temp,battle;
-    char name;
+    int option1,points,dificulty,temp,battle,leng;
+    char name[N];
     printf(" Wybierz Poziom trudnoœci.\n\n 1. Latwy\n 2. Sredni\n 3. Trudny\n 4. Informacje o poziomach trudnoœci\n\n Wybierz jedna z opcji : ");
     scanf("%d",&dificulty);
     printf("\n");
@@ -168,7 +201,8 @@ void game(){
     temp=dificulty;
     printf("\n\n");
     printf(" Podaj swoje imie : ");
-    scanf("%s",&name);
+    for(leng=0;leng<0;leng++){
+    scanf("%s",name[leng]);}
     printf("\n");
     printf(" Tworzenie postaci. \n\n 1. Wlasna postac.\n 2. Gotowa Postac (Uwaga atrybuty przydzielone po rowno).\n\n Wybierz opcje : ");
     scanf("%d",&option1);
@@ -183,6 +217,6 @@ void game(){
     viewstats(name);
     battle=fight1(temp);
     if(battle==1){printf("\nWygrana!\n");}
-    else if(battle=0){printf("\nPorazka\n");}
+    else if(battle=3){printf("\nPorazka\n");}
     system ("PAUSE");
 }
