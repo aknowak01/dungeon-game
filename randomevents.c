@@ -122,7 +122,7 @@ int fight1(int dificulty)
                 }
 
             }
-            else if(player.health-skeleton.damage<1){return 0;}
+
             else return 1;
 
 
