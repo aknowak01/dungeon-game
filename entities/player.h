@@ -1,12 +1,9 @@
+#include "../headers.h"
 #ifndef PLAYER_H_INCLUDED
 #define PLAYER_H_INCLUDED
-struct atrilist;
-struct playerstats;
-void autoatri(int);
-void playeratri(int);
-void stats(int);
-void viewstats(char);
-void viewatri();
-
-
+Atributes setPlayerAtributesAuto(int);
+Atributes setPlayerAtributesManually(int);
+PlayerStats setPlayerStats(PlayerStats,Difficulty);
+void printStats(PlayerStats);
+void printAtributes(Atributes);
 #endif

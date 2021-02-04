@@ -18,9 +18,18 @@
 
 1611733037 c:\users\fason\onedrive\pulpit\projektzal\randomevents.h
 
-1612467839 source:c:\users\fason\onedrive\pulpit\projektzal\randomevents.c
+1612482387 source:c:\users\fason\onedrive\pulpit\projektzal\randomevents.c
 	"randomevents.h"
 	<stdio.h>
 	<stdlib.h>
-	<windows.h>
+	"entities/player.c"
+	<stdbool.h>
+
+1612482129 c:\users\fason\onedrive\pulpit\projektzal\entities\player.c
+	"../headers.h"
+
+1612479845 c:\users\fason\onedrive\pulpit\projektzal\headers.h
+
+1612481730 c:\users\fason\onedrive\pulpit\projektzal\entities\player.h
+	"../headers.h"
 
