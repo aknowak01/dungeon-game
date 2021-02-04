@@ -11,15 +11,16 @@
 	<stdio.h>
 	<stdlib.h>
 
-1611697536 source:c:\users\fason\onedrive\pulpit\projektzal\main.c
+1612457935 source:c:\users\fason\onedrive\pulpit\projektzal\main.c
 	<stdio.h>
 	<stdlib.h>
 	"randomevents.h"
 
 1611733037 c:\users\fason\onedrive\pulpit\projektzal\randomevents.h
 
-1611753201 source:c:\users\fason\onedrive\pulpit\projektzal\randomevents.c
+1612467839 source:c:\users\fason\onedrive\pulpit\projektzal\randomevents.c
 	"randomevents.h"
 	<stdio.h>
 	<stdlib.h>
+	<windows.h>
 

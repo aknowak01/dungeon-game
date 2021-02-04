@@ -5,7 +5,7 @@
 void main()
 {
     int option;
-    printf(" Mroczne Czasy.\n \n 1. Rozpoczêcie Gry. \n 2. Wyjœcie.\n\n Wybierz opcje : ");
+    printf(" Legenda Krogga.\n \n 1. Rozpoczêcie Gry. \n 2. Wyjœcie.\n\n Wybierz opcje : ");
     scanf("%d",&option);
     printf("\n");
     while(1)
