@@ -1,6 +1,7 @@
+#include "../headers.h"
 #ifndef CHAPTERONE_H_INCLUDED
 #define CHAPTERONE_H_INCLUDED
 
-bool runChapterOne(GameSettings gameSettings);
-
+int runChapterOne(GameSettings gameSettings);
+int runBossFightOne(GameSettings gameSettings);
 #endif // CHAPTERONE_H_INCLUDED

@@ -33,42 +33,29 @@
 		</Compiler>
 		<Unit filename="chapters/chapterone.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="chapters/chapterone.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="chapters/mainchapters.c">
+		<Unit filename="chapters/chapterone.h" />
+		<Unit filename="chapters/chaptertwo.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="chapters/mainchapters.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
-		<Unit filename="entities/enemies.c">
+		<Unit filename="chapters/chaptertwo.h" />
+		<Unit filename="core/fightcore.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
+		<Unit filename="core/fightcore.h" />
 		<Unit filename="entities/enemies.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="entities/player.c">
 			<Option compilerVar="CC" />
-			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
 		<Unit filename="entities/player.h">
 			<Option target="&lt;{~None~}&gt;" />
 		</Unit>
-		<Unit filename="headers.h">
-			<Option target="&lt;{~None~}&gt;" />
-		</Unit>
+		<Unit filename="headers.h" />
 		<Unit filename="main.c">
 			<Option compilerVar="CC" />
 		</Unit>
-		<Unit filename="randomevents.c">
-			<Option compilerVar="CC" />
-		</Unit>
-		<Unit filename="randomevents.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

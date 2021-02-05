@@ -11,14 +11,18 @@
 	<stdio.h>
 	<stdlib.h>
 
-1612457935 source:c:\users\fason\onedrive\pulpit\projektzal\main.c
+1612483893 source:c:\users\fason\onedrive\pulpit\projektzal\main.c
 	<stdio.h>
 	<stdlib.h>
-	"randomevents.h"
+	"headers.h"
+	"entities/player.h"
+	"chapters/chapterone.h"
+	"chapters/chaptertwo.h"
+	"core/fightcore.h"
 
 1611733037 c:\users\fason\onedrive\pulpit\projektzal\randomevents.h
 
-1612482387 source:c:\users\fason\onedrive\pulpit\projektzal\randomevents.c
+1612483210 source:c:\users\fason\onedrive\pulpit\projektzal\randomevents.c
 	"randomevents.h"
 	<stdio.h>
 	<stdlib.h>
@@ -30,6 +34,27 @@
 
 1612479845 c:\users\fason\onedrive\pulpit\projektzal\headers.h
 
-1612481730 c:\users\fason\onedrive\pulpit\projektzal\entities\player.h
+1612482094 c:\users\fason\onedrive\pulpit\projektzal\entities\player.h
 	"../headers.h"
+
+1612484794 c:\users\fason\onedrive\pulpit\projektzal\chapters\chapterone.h
+	"../headers.h"
+
+1612484805 c:\users\fason\onedrive\pulpit\projektzal\chapters\chaptertwo.h
+	"../headers.h"
+
+1612484835 c:\users\fason\onedrive\pulpit\projektzal\core\fightcore.h
+	"../headers.h"
+
+1612485004 source:c:\users\fason\onedrive\pulpit\projektzal\entities\player.c
+	"../headers.h"
+
+1612484886 source:c:\users\fason\onedrive\pulpit\projektzal\core\fightcore.c
+	"fightcore.h"
+
+1612484899 source:c:\users\fason\onedrive\pulpit\projektzal\chapters\chaptertwo.c
+	"chaptertwo.h"
+
+1612484911 source:c:\users\fason\onedrive\pulpit\projektzal\chapters\chapterone.c
+	"chapterone.h"
 
