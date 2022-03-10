@@ -1,2 +1,2 @@
 # dungeon-game
-1. If you want to run this program, you need to have CodeBlocks or just find in bin/release/projektzal.exe
+1. To run fin exe in bin/release.
